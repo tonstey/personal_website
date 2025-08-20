@@ -1,0 +1,50 @@
+const skills = {
+  languages: [
+    { name: "English", experience: "Fluent" },
+    { name: "Vietnamese", experience: "Professional" },
+    { name: "Korean", experience: "Elementary" },
+    { name: "Spanish", experience: "Elementary" },
+  ],
+  programmingLanguages: [
+    "C++",
+    "Java",
+    "Python",
+    "HTML/CSS",
+    "JavaScript",
+    "TypeScript",
+    "R",
+    "SQL",
+    "MATLAB",
+  ],
+  frameworks: [
+    "ReactJS",
+    "Tailwind",
+    "Node.js",
+    "Next.js",
+    "Express.js",
+    "Django",
+    "FastAPI",
+  ],
+  tools: [
+    "VIM",
+    "Git",
+    "VS Code",
+    "Visual Studio Code",
+    "Eclipse",
+    "Jupyter Notebook",
+    "Firebase",
+    "MongoDB",
+  ],
+  interests: [
+    "Full-Stack Engineering",
+    "Front-End Engineering",
+    "Back-End Engineering",
+    "Data Science",
+    "Data Analysis",
+    "Data Engineering",
+    "Artificial Intelligence (AI) Engineering",
+    "Machine Learning (ML) Engineering",
+  ],
+};
+
+export default skills;

@@ -2,91 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-  
-  color: #fefae0;
-  position: static;
-
-
+@font-face {
+  font-family: "BokutehPro";
+  src: url("/fonts/BokutehPro.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
-body {
+@font-face {
+  font-family: "SeuratPro";
+  src: url("/fonts/SeuratPro.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+
   position: static;
-  margin: 0;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: #e0dbbc;
   box-sizing: border-box;
 }
 
-#app{
+#root {
   width: 100vw;
   height: 100vh;
 }
 
-#home_top {
-  background-image: url("home_images/background_top.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  z-index: 0;
-
+::-webkit-scrollbar {
+  width: 0.6rem;
 }
 
-#home_bottom {
-  background-image: url("home_images/background_bottom.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
- z-index: 5;
+::-webkit-scrollbar-track {
+  background-color: #d4c9a1;
+  border-radius: 4rem;
 }
 
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-40px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-  
-}
-#cloud1 {animation: bounce 6s infinite;}
-#cloud2 {animation: bounce 8s infinite;}
-#cloud3 {animation: bounce 5s infinite;}
-#cloud4 {animation: bounce 4s infinite;}
-#cloud5 {animation: bounce 7s infinite;}
-#cloud6 {animation: bounce 5.5s infinite;}
-#cloud7 {animation: bounce 7s infinite;}
-
-@keyframes bikeRide {
-  0% {
-    transform: translateX(-20%);
-  }
-  100% {
-    transform: translateX(110vw);
-  }
-}
-#bike {
-  animation: bikeRide 15s linear infinite;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #b5a96d;
+  border-radius: 4rem;
 }
 
-#education li, #skills li {
-  width: 50%;
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a49653;
+  cursor: pointer;
 }
 
-#projects {
-  -webkit-box-shadow: inset 0px 0px 23px -1px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 0px 0px 23px -1px rgba(0,0,0,0.75);
-  box-shadow: inset 0px 0px 30px -8px rgba(0,0,0,0.7);
-}
+.tab-active {
+  box-shadow: 0px 0px 45px 10px #8d8241 inset;
+  -webkit-box-shadow: 0px 0px 45px 10px #8d8241 inset;
+  -moz-box-shadow: 0px 0px 45px 10px #8d8241 inset;
 
-@media only screen and (max-width: 570px){
-  #education li, #skills li {
-    width: 100%;
-  }
+  border: 2px solid #544e27;
 }
-

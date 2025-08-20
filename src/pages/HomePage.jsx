@@ -1,32 +1,113 @@
-import React from "react"
-import '../index.css'
+import { useEffect } from "react";
+
+import { Canvas, useThree } from "@react-three/fiber";
+import { useGLTF, OrbitControls, PerspectiveCamera } from "@react-three/drei";
+
+import "../index.css";
 
 export default function HomePage() {
+  const capy1 = useGLTF("/blender/capy1.glb");
+  const capy2 = useGLTF("/blender/capy2.glb");
+  const capy3 = useGLTF("/blender/capy3.glb");
+  const cat1 = useGLTF("/blender/cat1.glb");
+  const cat2 = useGLTF("/blender/cat2.glb");
+  const cat3 = useGLTF("/blender/cat3.glb");
+  const cat4 = useGLTF("/blender/cat4.glb");
+  const frog = useGLTF("/blender/Frog.glb");
+  const turtle = useGLTF("/blender/turtle.glb");
 
+  const CameraLook = () => {
+    const { camera } = useThree();
 
+    useEffect(() => {
+      camera.position.set(0, 5, 10);
+      camera.lookAt(0, -2, 0);
+      camera.fov = 60;
+    }, [camera]);
 
-    return (
-        <>
-            <section className="static flex flex-col w-full h-full bg-opacity-0" id="homepage">
-                <div className="static">
-                
-                    <div id="home_top" className="w-full h-full fixed top-0 ">
-                        <img src="home_images/cloudSide.png" className="h-[50%] w-[30%] left-0 top-[30%] fixed" id="cloud1"></img>
-                        <img src="home_images/cloudset1.png" className="h-[50%] w-[30%] left-[8%] top-[11%] fixed" id="cloud2"></img>
-                        <img src="home_images/cloudsetMini1.png" className="h-[80%] w-[40%] left-[24%] top-[8%] fixed" id="cloud3"></img>
-                        <img src="home_images/cloudMini1.png" className="h-[50%] w-[30%] left-[14%] top-[38%] fixed" id="cloud4"></img>
-                        <img src="home_images/cloudset2.png" className="h-[50%] w-[30%] left-[35%] top-[24%] fixed" id="cloud5"></img>
-                        <img src="home_images/cloudMini2.png" className="h-[50%] w-[30%] left-[53%] top-[40%] fixed" id="cloud6"></img>
-                        <img src="home_images/cloudset3.png" className="h-[50%] w-[30%] left-[66%] top-[17%] fixed" id="cloud7"></img>
-                    </div>
-                </div>
-            
-                <div id="home_bottom" className="w-full h-[100%] static bottom-0">
-                    <img src="home_images/bike.gif" id="bike" className="w-[15%] z-0 bottom-[10%] left-[-10%] absolute"></img>
-                </div>  
-               
-                                
-            </section>
-        </>
-    )
+    return null;
+  };
+
+  return (
+    <>
+      <section
+        className="relative flex h-full w-full flex-1 flex-col items-center overflow-y-hidden"
+        id="homepage"
+      >
+        <div className="absolute left-1/2 top-0 z-10 w-fit -translate-x-1/2 transform rounded-lg border-2 border-black bg-white p-2 px-4 text-center font-bokuteh text-2xl font-bold text-[#74664B] md:rounded-full">
+          Welcome to Tony's Portfolio Website!
+        </div>
+
+        <div className="absolute bottom-0 z-10 flex w-full items-center justify-between px-2 pb-2 font-bokuteh text-[10px] font-extralight text-[#74664B] sm:text-xs md:px-6 md:text-sm lg:text-base">
+          <h1>Hold left-click to rotate the screen</h1>
+          <h1 className="text-center">
+            All models created by @PhilipMyGasTank on Roblox
+          </h1>
+          <h1>Hold right-click to move the screen</h1>
+        </div>
+
+        <Canvas className="h-full w-full">
+          <ambientLight intensity={2.25} />
+          <PerspectiveCamera makeDefault />
+          <CameraLook />
+          <primitive
+            scale={[1.5, 1.5, 1.5]}
+            object={capy1.scene}
+            position={[0, -5.25, -3.75]}
+          />
+          <primitive
+            scale={[0.25, 0.25, 0.25]}
+            object={capy2.scene}
+            position={[2, -3.75, 2.25]}
+            rotation={[-0.2, 0, 0]}
+          />
+          <primitive
+            scale={[0.25, 0.25, 0.25]}
+            object={capy3.scene}
+            position={[4.75, -3.75, 2.25]}
+            rotation={[-0.2, 0, 0]}
+          />
+
+          <primitive
+            scale={[2, 2, 2]}
+            object={cat1.scene}
+            position={[2.4, -0.8, 0.5]}
+            rotation={[-0.4, -0.5, 0]}
+          />
+          <primitive
+            scale={[2, 2, 2]}
+            object={cat4.scene}
+            position={[2.4, -1.75, 0.8]}
+            rotation={[-0.4, -0.5, 0]}
+          />
+
+          <primitive
+            scale={[-2, 2, 2]}
+            object={cat2.scene}
+            position={[-2.4, -0.8, 0.5]}
+            rotation={[-0.4, 0.5, 0]}
+          />
+          <primitive
+            scale={[-2, 2, 2]}
+            object={cat3.scene}
+            position={[-2.4, -1.75, 0.8]}
+            rotation={[-0.4, 0.5, 0]}
+          />
+
+          <primitive
+            scale={[0.3, 0.3, 0.3]}
+            object={frog.scene}
+            position={[0, 0.35, 0]}
+          />
+          <primitive
+            scale={[4.75, 4.75, 4.75]}
+            object={turtle.scene}
+            position={[0, -1, 0]}
+          />
+
+          <OrbitControls />
+        </Canvas>
+      </section>
+    </>
+  );
 }
