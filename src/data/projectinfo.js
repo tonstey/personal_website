@@ -41,7 +41,7 @@ export const projectinformation = [
       "A full stack e-commerce website with user signup and login with authentication. Users can search by category, add items to cart, and imitate checkout. The website also includes a dashboard for the admin to manage products and orders. Product images are stored in AWS S3.",
   },
   {
-    imageURL: "project_images/cogs108.png",
+    imageURL: "/personal_website/project_images/cogs108.png",
     demoURL: "https://github.com/tonstey/COGS108_Data_Science_Project",
     githubURL: "https://github.com/tonstey/COGS108_Data_Science_Project",
     name: "Factors  Affecting Student Grades",
@@ -61,7 +61,7 @@ export const projectinformation = [
       "A data science project that analyzes the relationship between personal and academic factors, such as family relationships or number of school absences, to grades. The data, which is from a Kaggle dataset, is analyzed using statistical methods and visualizations.",
   },
   {
-    imageURL: "project_images/weatherwise.png",
+    imageURL: "/personal_website/project_images/weatherwise.png",
     demoURL: "",
     githubURL: "https://github.com/tonstey/weather-app",
     name: "Weather Wise",
@@ -73,7 +73,7 @@ export const projectinformation = [
       "A weather app that fetches weather data from an API  and displays it to the user. It also includes a search bar with debouncing for the user to search for a specific location. This app uses local storage to store the user's desired locations between sessions.",
   },
   {
-    imageURL: "project_images/quizzical.png",
+    imageURL: "/personal_website/project_images/quizzical.png",
     demoURL: "https://tonstey.github.io/quizzical/",
     githubURL: "https://github.com/tonstey/quizzical",
     name: "Quizzical",

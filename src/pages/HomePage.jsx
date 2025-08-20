@@ -6,15 +6,15 @@ import { useGLTF, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import "../index.css";
 
 export default function HomePage() {
-  const capy1 = useGLTF("/blender/capy1.glb");
-  const capy2 = useGLTF("/blender/capy2.glb");
-  const capy3 = useGLTF("/blender/capy3.glb");
-  const cat1 = useGLTF("/blender/cat1.glb");
-  const cat2 = useGLTF("/blender/cat2.glb");
-  const cat3 = useGLTF("/blender/cat3.glb");
-  const cat4 = useGLTF("/blender/cat4.glb");
-  const frog = useGLTF("/blender/Frog.glb");
-  const turtle = useGLTF("/blender/turtle.glb");
+  const capy1 = useGLTF("/personal_website/blender/capy1.glb");
+  const capy2 = useGLTF("/personal_website/blender/capy2.glb");
+  const capy3 = useGLTF("/personal_website/blender/capy3.glb");
+  const cat1 = useGLTF("/personal_website/blender/cat1.glb");
+  const cat2 = useGLTF("/personal_website/blender/cat2.glb");
+  const cat3 = useGLTF("/personal_website/blender/cat3.glb");
+  const cat4 = useGLTF("/personal_website/blender/cat4.glb");
+  const frog = useGLTF("/personal_website/blender/Frog.glb");
+  const turtle = useGLTF("/personal_website/blender/turtle.glb");
 
   const CameraLook = () => {
     const { camera } = useThree();
