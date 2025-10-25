@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import validator from "validator";
+import { validate } from "email-validator";
 import emailjs from "@emailjs/browser";
 
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
@@ -20,7 +20,7 @@ export default function ContactPage() {
       return;
     }
 
-    if (!validator.isEmail(email)) {
+    if (!validate(email)) {
       setEmailStatus("invalid");
       return;
     }

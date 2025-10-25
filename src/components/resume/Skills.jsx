@@ -1,12 +1,10 @@
-import useWebStore from "../../store/store";
+import skills from "../../data/skillsinfo";
 
-export default function SkillsComponent({ data }) {
-  const setResume = useWebStore((state) => state.setDisplayResume);
-
+export default function SkillsComponent() {
   return (
     <>
       <div>
-        {data ? (
+        {skills ? (
           <div className="h-full max-w-full overflow-y-auto p-6">
             <div className="relative overflow-y-auto rounded-2xl bg-[#dcd3aa] p-6">
               <div className="flex flex-col gap-4 rounded-xl bg-[#f2eee2] p-6">
@@ -15,8 +13,11 @@ export default function SkillsComponent({ data }) {
                     Spoken Languages
                   </h1>
                   <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
-                    {data.languages.map((item) => (
-                      <div className="rounded-full bg-[#dcd3aa] px-2 py-0.5">
+                    {skills.languages.map((item) => (
+                      <div
+                        className="rounded-full bg-[#dcd3aa] px-2 py-0.5"
+                        key={item.name}
+                      >
                         {item.name} ({item.experience})
                       </div>
                     ))}
@@ -28,7 +29,7 @@ export default function SkillsComponent({ data }) {
                     Programming Languages
                   </h1>
                   <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
-                    {data.programmingLanguages.map((item) => (
+                    {skills.programmingLanguages.map((item) => (
                       <div className="rounded-full bg-[#dcd3aa] px-2 py-0.5">
                         {item}
                       </div>
@@ -41,7 +42,7 @@ export default function SkillsComponent({ data }) {
                     Frameworks
                   </h1>
                   <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
-                    {data.frameworks.map((item) => (
+                    {skills.frameworks.map((item) => (
                       <div className="rounded-full bg-[#dcd3aa] px-2 py-0.5">
                         {item}
                       </div>
@@ -54,7 +55,7 @@ export default function SkillsComponent({ data }) {
                     Tools
                   </h1>
                   <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
-                    {data.tools.map((item) => (
+                    {skills.tools.map((item) => (
                       <div className="rounded-full bg-[#dcd3aa] px-2 py-0.5">
                         {item}
                       </div>
@@ -67,7 +68,7 @@ export default function SkillsComponent({ data }) {
                     Interests
                   </h1>
                   <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
-                    {data.interests.map((item) => (
+                    {skills.interests.map((item) => (
                       <div className="rounded-full bg-[#dcd3aa] px-2 py-0.5">
                         {item}
                       </div>

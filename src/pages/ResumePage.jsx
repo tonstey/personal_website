@@ -4,10 +4,6 @@ import ExperienceComponent from "../components/resume/Experience";
 import EducationComponent from "../components/resume/Education";
 import SkillsComponent from "../components/resume/Skills";
 
-import education from "../data/education";
-import experience from "../data/experience";
-import skills from "../data/skillsinfo";
-
 import { MdOutlineFileDownload } from "react-icons/md";
 import { IoExitOutline } from "react-icons/io5";
 
@@ -72,16 +68,16 @@ export default function ResumePage() {
           {/* END TABS */}
           {/* BEGIN INFO */}
           <div
-            className={`${resume ? "col-span-12 flex" : "hidden"} h-full w-full overflow-y-auto md:col-span-9 md:flex`}
+            className={`${resume ? "col-span-12 flex" : "hidden"} h-full w-full overflow-y-auto pb-12 md:col-span-9 md:flex`}
           >
             {(() => {
               switch (resume) {
                 case "experience":
-                  return <ExperienceComponent data={experience} />;
+                  return <ExperienceComponent />;
                 case "education":
-                  return <EducationComponent data={education} />;
+                  return <EducationComponent />;
                 case "skills":
-                  return <SkillsComponent data={skills} />;
+                  return <SkillsComponent />;
                 default:
                   break;
               }

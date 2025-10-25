@@ -3,25 +3,46 @@ export const projectinformation = [
     imageURL: "",
     demoURL: "",
     githubURL: "https://github.com/tonstey/recipe-recommender",
-    name: "Receipt",
+    name: "Recipe",
     date: "",
     type: "Full Stack Software Development",
     inProgress: true,
     languages: [
-      "HTML",
-      "CSS",
-      "JavaScript",
+      "TypeScript",
       "ReactJS",
+      "React Router DOM",
       "Tailwind",
-      "Redux",
-      "Django",
+      "Zustand",
+      "FastAPI",
       "SQLite",
     ],
-    description: "HII",
+    description:
+      "A full-stack website designed to recommend users recipes based on users' ingredients supply and cuisine preferences.",
   },
   {
-    imageURL: "",
+    imageURL: "/personal_website/project_images/cartcompass.png",
     demoURL: "",
+    githubURL: "https://github.com/tonstey/receipt_saver",
+    name: "CartCompass",
+    date: "Oct 2025",
+    type: "Full Stack Software Development",
+    inProgress: true,
+    languages: [
+      "TypeScript",
+      "ReactJS",
+      "React Router DOM",
+      "Tailwind",
+      "Zustand",
+      "Django",
+      "SQLite",
+      "OCR",
+    ],
+    description:
+      "A full-stack website that aims to help users save money by being aware of their expenses. Users are able to scan or submit a photo of their receipt. Then the application will use OCR technology to read the receipt and automatically fill in essential receipt data. Upon login, users can view an overview of their most recent receipts and essential data over the past month. Users are able to edit the contents of the receipt. If needed, users can also select items from their receipt that they would like compared with other stores with online websites using web scraping.",
+  },
+  {
+    imageURL: "/personal_website/project_images/velmaemart.png",
+    demoURL: "https://velmaemart.vercel.app/",
     githubURL: "https://github.com/tonstey/e-commerce",
     name: "VelmaeMart",
     date: "Jan 2025",
@@ -38,7 +59,7 @@ export const projectinformation = [
       "AWS S3",
     ],
     description:
-      "A full stack e-commerce website with user signup and login with authentication. Users can search by category, add items to cart, and imitate checkout. The website also includes a dashboard for the admin to manage products and orders. Product images are stored in AWS S3.",
+      "A full stack e-commerce website with user signup and login with authentication. Users can search and sort by category, add items to cart, and imitate checkout. Users are also able to rate and review products on a scale from 1-5, with the option to send their reviews anonymously as well. The website also includes a dashboard for the admin to manage products and orders. Product images are stored in AWS S3.",
   },
   {
     imageURL: "/personal_website/project_images/cogs108.png",
@@ -58,7 +79,7 @@ export const projectinformation = [
       "statsmodels",
     ],
     description:
-      "A data science project that analyzes the relationship between personal and academic factors, such as family relationships or number of school absences, to grades. The data, which is from a Kaggle dataset, is analyzed using statistical methods and visualizations.",
+      "A data science project that analyzes the relationship between personal and academic factors, such as family relationships or number of school absences, to grades. The data, which is from a Kaggle dataset, is analyzed using statistical methods and visualizations. My role in the project was data wrangling and conducting exploratory data analysis, using heat maps and line plots to analyze trends.",
   },
   {
     imageURL: "/personal_website/project_images/weatherwise.png",
@@ -82,6 +103,6 @@ export const projectinformation = [
     inProgress: false,
     languages: ["HTML", "CSS", "JavaScript", "ReactJS"],
     description:
-      "A quiz app that fetches random questions from an API and displays them to the user. Users can select how many questions they'd like (up to 50). Upon quiz submission, the app displays the user's score and correct answers. Implemented a state management system without using libraries",
+      "A quiz app that fetches random questions from an API and displays them to the user. Users can select how many questions they'd like (up to 50). Upon quiz submission, the app displays the user's score and correct answers. Implemented a state management system without using libraries.",
   },
 ];

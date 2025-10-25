@@ -89,7 +89,10 @@ export default function PortfolioPage() {
                 >
                   <div className="flex flex-wrap gap-3">
                     {store.languages.map((item) => (
-                      <div className="rounded-full border border-[#74664B] bg-[#f2f5de] px-2 py-1 font-seurat text-xs text-[#74664B]">
+                      <div
+                        className="rounded-full border border-[#74664B] bg-[#f2f5de] px-2 py-1 font-seurat text-xs text-[#74664B]"
+                        key={item}
+                      >
                         {item}
                       </div>
                     ))}

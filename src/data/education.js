@@ -98,6 +98,17 @@ const education = [
     ],
     activities: [],
   },
+  {
+    name: "California State University, Long Beach",
+    location: "Long Beach, CA",
+    startDate: "01/2026",
+    endDate: "Present",
+    gpa: null,
+    degree: "Masters of Science in Computer Science",
+    awards: [],
+    courses: [],
+    activities: [],
+  },
 ];
 
 export default education;

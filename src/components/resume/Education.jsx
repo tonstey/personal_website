@@ -1,20 +1,21 @@
 import { MdOutlineCalendarMonth, MdLocationOn } from "react-icons/md";
-import useWebStore from "../../store/store";
+import education from "../../data/education";
 
-export default function EducationComponent({ data }) {
-  const setResume = useWebStore((state) => state.setDisplayResume);
-
+export default function EducationComponent() {
   return (
     <>
       <div>
-        {data.length > 0 ? (
+        {education.length > 0 ? (
           <div className="h-full max-w-full overflow-hidden p-6">
             <div className="relative flex h-full flex-col gap-4 overflow-y-auto rounded-2xl bg-[#dcd3aa] p-6">
-              {data
+              {education
                 .slice()
                 .reverse()
                 .map((school) => (
-                  <div className="flex flex-col gap-4 rounded-xl bg-[#f2eee2] p-6">
+                  <div
+                    className="flex flex-col gap-4 rounded-xl bg-[#f2eee2] p-6"
+                    key={school.name}
+                  >
                     {/* BEGIN SCHOOL INFO */}
                     <div className="flex flex-wrap justify-between font-bokuteh text-[#74664B]">
                       <div className="flex flex-col gap-1">
@@ -23,7 +24,7 @@ export default function EducationComponent({ data }) {
                       </div>
 
                       <div className="flex flex-col items-start md:items-end">
-                        <h1 className="text- flex items-center gap-1">
+                        <h1 className="flex items-center gap-1">
                           <MdLocationOn className="text-2xl" />
                           {school.location}
                         </h1>

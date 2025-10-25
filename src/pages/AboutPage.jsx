@@ -1,4 +1,3 @@
-import React from "react";
 import { CgProfile } from "react-icons/cg";
 
 export default function AboutPage() {
@@ -19,13 +18,22 @@ export default function AboutPage() {
               engineering, back-end engineering, full-stack engineering, or data
               analytics!
               <br /> <br />
-              For more information about myself, I am currently an undergrad
-              student at UC San Diego studying Mathematics and Computer Science
-              as a joint major, with an expected graduation date of September
-              2025! I have experience in full-stack software development and
-              data science, with an interest in machine learning as well! I also
-              have plans on pursuing higher education at UCSD, UCI, UCR, or
-              CSULB after getting my Bachelor's degree.
+              For more information about myself, I have recently graduated from
+              UC San Diego with a Bachelors of Science in Mathematics, with a
+              specialization in Computer Science! As of January 2026, I am
+              enrolled at CSU Long Beach getting my masters in Computer Science
+              as well! I have experience in full-stack software development and
+              data science, with an interest in machine learning as well!
+              <br /> <br />
+              I have recently come back from a study abroad program I did in
+              South Korea, specifically Yonsei University in Seoul! I spent 4
+              months in the beautiful country, exploring all of scenery, while
+              spending lots of time shopping and eating at much lower prices
+              than the U.S. I also indulged in my interest in K-Pop going to
+              concerts as well, like TXT and Le Sserafim. If you like them as
+              well or want some song recommendations, or even recommendations
+              about what to do in South Korea in general, feel free to shoot me
+              a message in the Contact Me section!
               <br /> <br />
               In my free time, I love to learn, especially with the resources
               that are available today! In particular, I love watching

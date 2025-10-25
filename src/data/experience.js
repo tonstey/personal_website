@@ -1,11 +1,82 @@
-const experience = [];
+export const techJobs = [];
 
-const job = {
-  role: "",
-  company: "",
-  startDate: "",
-  endDate: "",
-  tasks: [],
-};
-
-export default experience;
+export const nonTechJobs = [
+  {
+    role: "Research Intern",
+    company: "Barun ICT Research Center",
+    location: "Yonsei University, Sinchon, Seoul, South Korea",
+    startDate: "Mar 2025",
+    endDate: "Jun 2025",
+    tasks: [
+      "Wrote 4 articles discussing password integrity, CAPTCHA usefullness, the use of AI in the job hiring process, and personalized ads",
+      "Conducted research for scholarly articles to enrich knowledge in topics & support my arguments",
+      "Attended weekly meetings with mentor to discuss suggestions, critiques, and advice",
+    ],
+  },
+  {
+    role: "Cashier/Barista",
+    company: "Tallgrass Drink",
+    location: "Garden Grove, CA, USA",
+    startDate: "Sept 2024",
+    endDate: "Feb 2025",
+    tasks: [
+      "Provided excellent customer service",
+      "Astutely listened to customers to ensure accurate orders",
+      "Occasionally altered menu items in order to suit customers' needs",
+      "Accurately and efficiently gave exact change",
+      "Handled card transactions and online orders",
+      "Packaged orders in a timely manner",
+      "Maintained a clean working & dining environment",
+      "Replenished supplies when needed",
+      "Accurately followed recipes to ensure consistent products",
+    ],
+  },
+  {
+    role: "Cashier",
+    company: "Myungrang Hot Dog",
+    location: "Garden Grove, CA, USA",
+    startDate: "Jun 2021",
+    endDate: "Feb 2022",
+    tasks: [
+      "Provided excellent customer service",
+      "Astutely listened to customers to ensure accurate orders",
+      "Occasionally altered menu items in order to suit customers' needs",
+      "Accurately and efficiently gave exact change",
+      "Handled card transactions and online orders",
+      "Packaged orders in a timely manner",
+      "Maintained a clean working & dining environment",
+      "Replenished supplies when needed",
+      "Accurately followed recipes to ensure consistent products",
+    ],
+  },
+  {
+    role: "Tutor",
+    company: "Kumon",
+    location: "Garden Grove, CA, USA",
+    startDate: "Jun 2021",
+    endDate: "Oct 2021",
+    tasks: [
+      "Accurately and efficiently graded worksheets completed by students",
+      "Assigned worksheets to students based on skill level",
+      "Occasionally assisted students in person when needed",
+      "Privately tutored 2 students, grades 1 and 4, in math subjects far above grade level (Multiplication/Division and Algebra, respectively)",
+      "Also privately tutored special needs student in reading, improving reading level by 2 grades by the end of two month session",
+    ],
+  },
+  {
+    role: "Cashier",
+    company: "Bolsa Grande Student Store",
+    location: "Garden Grove, CA, USA",
+    startDate: "Aug 2018",
+    endDate: "Mar 2020",
+    tasks: [
+      "Provided excellent customer service",
+      "Astutely listened to customers to ensure accurate orders",
+      "Accurately and efficiently gave exact change",
+      "Packaged orders in a timely manner",
+      "Maintained a clean working environment",
+      "Replenished supplies when needed",
+      "Seasonally introduced new items to menu",
+    ],
+  },
+];
