@@ -1,23 +1,24 @@
 export const projectinformation = [
   {
-    imageURL: "",
-    demoURL: "",
+    imageURL: "/personal_website/project_images/savorly.jpg",
+    demoURL: "https://savorly-one.vercel.app/",
     githubURL: "https://github.com/tonstey/recipe-recommender",
-    name: "Recipe",
-    date: "",
+    name: "Savorly",
+    date: "Dec 2025",
     type: "Full Stack Software Development",
     inProgress: true,
     languages: [
       "TypeScript",
       "ReactJS",
       "React Router DOM",
+      "TanStack Query (React Query)",
       "Tailwind",
       "Zustand",
       "FastAPI",
-      "SQLite",
+      "SQLAlchemy",
     ],
     description:
-      "A full-stack website designed to recommend users recipes based on users' ingredients supply and cuisine preferences.",
+      'A full-stack website designed to recommend users recipes based on users\' ingredients supply and cuisine preferences. Users are able to search different recipes and ingredients. Users are also able to like their favorite recipes and view key information about selected recipes, such as nutrition facts, steps, and the original recipe link as well. This website implements secure authentication methods, using confirmation emails as an account verification method and using JSON web tokens to authenticate logins. Recipes and ingredients derive from the Kaggle dataset, "Food.com Recipes and Interactions", which received their data from Food.com between the years 2000 and 2018.',
   },
   {
     imageURL: "/personal_website/project_images/cartcompass.png",
@@ -26,7 +27,7 @@ export const projectinformation = [
     name: "CartCompass",
     date: "Oct 2025",
     type: "Full Stack Software Development",
-    inProgress: true,
+    inProgress: false,
     languages: [
       "TypeScript",
       "ReactJS",
