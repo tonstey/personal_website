@@ -28,7 +28,7 @@ html {
   position: static;
   width: 100vw;
   height: 100vh;
-  background-image: url("decoration/background.png");
+  background-image: url("/decoration/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   box-sizing: border-box;
