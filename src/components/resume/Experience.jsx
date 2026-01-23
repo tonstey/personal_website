@@ -74,8 +74,8 @@ export default function ExperienceComponent() {
         </TabGroup>
 
         {experience.length > 0 ? (
-          <div className="h-full w-full overflow-hidden p-6">
-            <div className="relative flex h-full flex-col gap-4 overflow-y-auto rounded-2xl bg-[#dcd3aa] p-6">
+          <div className="h-full w-full overflow-hidden p-2 md:p-6">
+            <div className="relative flex h-full flex-col gap-4 overflow-y-auto rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-6">
               {experience.map((job) => (
                 <div
                   className="flex flex-col gap-4 rounded-xl bg-[#f2eee2] p-6"
@@ -83,16 +83,20 @@ export default function ExperienceComponent() {
                 >
                   <div className="flex flex-wrap justify-between font-bokuteh text-[#74664B]">
                     <div className="flex flex-col gap-1">
-                      <h1 className="text-lg">{job.role}</h1>
-                      <h1 className="text-md italic">{job.company}</h1>
+                      <h1 className="md:text-lg portrait:text-[1.2rem] md:portrait:text-lg">
+                        {job.role}
+                      </h1>
+                      <h1 className="md:text-md md:portrait:text-md italic portrait:text-[0.85rem]">
+                        {job.company}
+                      </h1>
                     </div>
 
                     <div className="flex flex-col items-start md:items-end">
-                      <h1 className="flex items-center gap-1">
+                      <h1 className="md:text-md md:portrait:text-md flex items-center gap-1 portrait:text-[0.75rem]">
                         <MdLocationOn className="text-2xl" />
                         {job.location}
                       </h1>
-                      <h1 className="flex items-center gap-1 text-sm italic">
+                      <h1 className="md:text-md md:portrait:text-md flex items-center gap-1 portrait:text-[0.75rem]">
                         <MdOutlineCalendarMonth className="text-xl" />
                         {job.startDate} - {job.endDate}
                       </h1>
@@ -104,9 +108,9 @@ export default function ExperienceComponent() {
                       <h1 className="mb-1 font-sans font-bold text-[#74664B]">
                         Tasks:
                       </h1>
-                      <div className="text-sm font-semibold text-[#74664B]">
+                      <div className="flex flex-col gap-2 pl-1 text-sm font-semibold text-[#74664B]">
                         {job.tasks.map((task) => (
-                          <div>{task}</div>
+                          <li>{task}</li>
                         ))}
                       </div>
                     </div>

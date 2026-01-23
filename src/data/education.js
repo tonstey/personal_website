@@ -106,7 +106,10 @@ const education = [
     gpa: null,
     degree: "Masters of Science in Computer Science",
     awards: [],
-    courses: [],
+    courses: [
+      "Advanced Topics in Programming Languages",
+      "Advanced Software Engineering",
+    ],
     activities: [],
   },
 ];

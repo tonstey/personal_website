@@ -6,7 +6,7 @@ export default function SkillsComponent() {
       <div>
         {skills ? (
           <div className="h-full max-w-full overflow-y-auto p-6">
-            <div className="relative overflow-y-auto rounded-2xl bg-[#dcd3aa] p-6">
+            <div className="relative overflow-y-auto rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-6">
               <div className="flex flex-col gap-4 rounded-xl bg-[#f2eee2] p-6">
                 <div>
                   <h1 className="mb-1 font-bokuteh text-lg text-[#74664B]">
@@ -15,7 +15,7 @@ export default function SkillsComponent() {
                   <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
                     {skills.languages.map((item) => (
                       <div
-                        className="rounded-full bg-[#dcd3aa] px-2 py-0.5"
+                        className="rounded-full bg-[#f3e0c7] px-2 py-0.5"
                         key={item.name}
                       >
                         {item.name} ({item.experience})
@@ -30,7 +30,7 @@ export default function SkillsComponent() {
                   </h1>
                   <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
                     {skills.programmingLanguages.map((item) => (
-                      <div className="rounded-full bg-[#dcd3aa] px-2 py-0.5">
+                      <div className="rounded-full bg-[#f3e0c7] px-2 py-0.5">
                         {item}
                       </div>
                     ))}
@@ -43,7 +43,7 @@ export default function SkillsComponent() {
                   </h1>
                   <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
                     {skills.frameworks.map((item) => (
-                      <div className="rounded-full bg-[#dcd3aa] px-2 py-0.5">
+                      <div className="rounded-full bg-[#f3e0c7] px-2 py-0.5">
                         {item}
                       </div>
                     ))}
@@ -56,7 +56,7 @@ export default function SkillsComponent() {
                   </h1>
                   <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
                     {skills.tools.map((item) => (
-                      <div className="rounded-full bg-[#dcd3aa] px-2 py-0.5">
+                      <div className="rounded-full bg-[#f3e0c7] px-2 py-0.5">
                         {item}
                       </div>
                     ))}
@@ -69,7 +69,7 @@ export default function SkillsComponent() {
                   </h1>
                   <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
                     {skills.interests.map((item) => (
-                      <div className="rounded-full bg-[#dcd3aa] px-2 py-0.5">
+                      <div className="rounded-full bg-[#f3e0c7] px-2 py-0.5">
                         {item}
                       </div>
                     ))}

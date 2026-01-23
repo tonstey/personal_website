@@ -78,7 +78,7 @@ export default function MenuBar() {
           </div>
 
           <span
-            className={`h-6 w-6 transform rounded-full shadow-md transition-transform duration-300 md:h-8 md:w-8 ${
+            className={`h-6 w-6 transform rounded-full shadow-2xl transition-transform duration-300 md:h-8 md:w-8 ${
               enabled
                 ? "translate-x-4 bg-white md:translate-x-12"
                 : "translate-x-0 bg-[#74664B]"

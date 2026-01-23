@@ -16,6 +16,7 @@ export default {
         retro: ['"Press Start 2P"'],
         bokuteh: ["BokutehPro", "sans-serif"],
         seurat: ["SeuratPro", "sans-serif"],
+        nunito: ["Nunito"],
       },
     },
   },

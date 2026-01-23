@@ -16,14 +16,21 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/Nunito-Variable.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
-
   position: static;
-
   width: 100vw;
   height: 100vh;
-  background-color: #e0dbbc;
+  background-image: url("decoration/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   box-sizing: border-box;
 }
 

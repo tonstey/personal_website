@@ -6,6 +6,7 @@ import SkillsComponent from "../components/resume/Skills";
 
 import { MdOutlineFileDownload } from "react-icons/md";
 import { IoExitOutline } from "react-icons/io5";
+import { FaGraduationCap, FaBriefcase, FaTools } from "react-icons/fa";
 
 export default function ResumePage() {
   const resume = useWebStore((state) => state.displayResume);
@@ -13,7 +14,7 @@ export default function ResumePage() {
 
   return (
     <>
-      <section className="flex flex-1 flex-col items-center overflow-y-hidden">
+      <section className="flex h-full w-full flex-1 flex-col items-center overflow-y-hidden">
         <div className="relative h-fit w-full">
           <h1 className="mb-2 text-center font-seurat text-4xl font-bold text-[#74664B]">
             Resume
@@ -29,46 +30,51 @@ export default function ResumePage() {
           )}
         </div>
 
-        <div className="grid h-full w-full grid-cols-12">
+        <div className="flex h-full w-full items-center justify-center px-4">
           {/* BEGIN TABS */}
           <div
-            className={`${resume ? "hidden" : "col-span-12 flex flex-col justify-center"} h-full items-center gap-5 overflow-y-auto md:col-span-3 md:flex md:flex-col md:justify-start`}
+            className={`${resume ? "hidden" : "flex flex-col justify-center sm:landscape:justify-start"} h-full w-[18rem] items-center gap-5 rounded-2xl sm:overflow-y-auto md:col-span-3 md:flex md:flex-col md:justify-start md:overflow-visible sm:landscape:overflow-auto lg:landscape:overflow-visible`}
           >
-            <h1
-              className={`flex w-[90%] items-center justify-center rounded-xl py-8 text-center font-seurat text-3xl text-[#74664B] hover:cursor-pointer hover:bg-[#d7d0a8] ${resume == "experience" ? "bg-gradient-to-r from-[#c6c18e] to-[#d9d4b1] shadow-lg" : ""}`}
-              onClick={() => setResume("experience")}
-              id="exptab"
-            >
-              Experience
-            </h1>
-            <h1
-              className={`flex w-[90%] items-center justify-center rounded-xl py-8 text-center font-seurat text-3xl text-[#74664B] hover:cursor-pointer hover:bg-[#d7d0a8] ${resume == "education" ? "bg-gradient-to-r from-[#c6c18e] to-[#d9d4b1] shadow-lg" : ""}`}
-              onClick={() => setResume("education")}
-              id="edutab"
-            >
-              Education
-            </h1>
-            <h1
-              className={`flex w-[90%] items-center justify-center rounded-xl py-8 text-center font-seurat text-3xl text-[#74664B] hover:cursor-pointer hover:bg-[#d7d0a8] ${resume == "skills" ? "bg-gradient-to-r from-[#c6c18e] to-[#d9d4b1] shadow-lg" : ""}`}
-              onClick={() => setResume("skills")}
-              id="skilltab"
-            >
-              Skills
-            </h1>
+            <div className="flex w-full flex-col items-center rounded-2xl bg-[#f3e0c7]">
+              <h1
+                className={`flex w-full items-center justify-center gap-4 rounded-xl py-8 text-center font-seurat text-2xl text-[#74664B] hover:cursor-pointer hover:bg-[#e2d1ab] ${resume == "experience" ? "scale-110 rounded-[1.5rem] bg-[#e2d1ab] shadow-lg transition-all duration-200" : ""}`}
+                onClick={() => setResume("experience")}
+                id="exptab"
+              >
+                <FaBriefcase className="text-[1.8rem]" />
+                Experience
+              </h1>
+              <h1
+                className={`flex w-full items-center justify-center gap-4 rounded-xl py-8 text-center font-seurat text-2xl text-[#74664B] hover:cursor-pointer hover:bg-[#e2d1ab] ${resume == "education" ? "scale-110 rounded-[1.5rem] bg-[#e2d1ab] shadow-lg transition-all duration-200" : ""}`}
+                onClick={() => setResume("education")}
+                id="edutab"
+              >
+                <FaGraduationCap className="text-[2.4rem]" />
+                Education
+              </h1>
+              <h1
+                className={`flex w-full items-center justify-center gap-4 rounded-xl py-8 text-center font-seurat text-2xl text-[#74664B] hover:cursor-pointer hover:bg-[#e2d1ab] ${resume == "skills" ? "scale-110 rounded-[1.5rem] bg-[#e2d1ab] shadow-lg transition-all duration-200" : ""}`}
+                onClick={() => setResume("skills")}
+                id="skilltab"
+              >
+                <FaTools className="text-[1.8rem]" />
+                Skills
+              </h1>
+            </div>
             <a
-              className="flex w-[90%] items-center justify-center gap-6 rounded-xl bg-[#6b5b47] px-4 py-8 text-center font-seurat text-xl text-white hover:bg-[#89745b]"
+              className="flex w-full items-center justify-center gap-4 rounded-xl bg-[#6b5b47] px-4 py-8 text-center font-seurat text-xl text-white hover:bg-[#89745b]"
               href="TonyVuong_Resume.pdf"
               download={"TonyVuong_Resume"}
             >
               {" "}
-              <MdOutlineFileDownload className="text-4xl" />
+              <MdOutlineFileDownload className="text-[2.75rem]" />
               Download Resume
             </a>
           </div>
           {/* END TABS */}
           {/* BEGIN INFO */}
           <div
-            className={`${resume ? "col-span-12 flex" : "hidden"} h-full w-full overflow-y-auto pb-12 md:col-span-9 md:flex`}
+            className={`${resume ? "flex flex-1" : "hidden"} h-full w-full overflow-y-auto pb-12 md:col-span-9 md:flex`}
           >
             {(() => {
               switch (resume) {

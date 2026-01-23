@@ -7,7 +7,7 @@ export default function EducationComponent() {
       <div>
         {education.length > 0 ? (
           <div className="h-full max-w-full overflow-hidden p-6">
-            <div className="relative flex h-full flex-col gap-4 overflow-y-auto rounded-2xl bg-[#dcd3aa] p-6">
+            <div className="relative flex h-full flex-col gap-4 overflow-y-auto rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-6">
               {education
                 .slice()
                 .reverse()
@@ -45,7 +45,7 @@ export default function EducationComponent() {
                       </h1>
                       <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
                         {school.courses.map((course) => (
-                          <div className="rounded-full bg-[#dcd3aa] px-2 py-0.5">
+                          <div className="rounded-full bg-[#f3e0c7] px-2 py-0.5">
                             {course}
                           </div>
                         ))}
