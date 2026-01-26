@@ -23,7 +23,7 @@ export default function PortfolioPage() {
           Projects
         </h1>
 
-        <div className="grid h-full w-full grid-cols-11 overflow-hidden">
+        <div className="grid h-full w-full grid-cols-11 overflow-hidden px-4 pb-4">
           {/* BEGIN LEFT SIDE */}
           <div
             className={`${store.name ? "hidden" : "col-span-11 flex"} h-full flex-wrap justify-center gap-4 overflow-y-auto p-4 md:col-span-7 md:flex`}
@@ -44,7 +44,7 @@ export default function PortfolioPage() {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: "100%", opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className={`${store.name ? "col-span-11 flex" : "hidden"} h-full flex-col items-center justify-between gap-3 overflow-hidden p-4 md:col-span-4 md:flex`}
+                className={`${store.name ? "col-span-11 flex" : "hidden"} h-full flex-col items-center justify-between gap-3 overflow-hidden rounded-xl bg-[#f3e0c7] p-4 md:col-span-4 md:flex`}
               >
                 {/* BEGIN HEADER */}
                 <div className="flex w-full flex-col gap-2">
@@ -85,7 +85,7 @@ export default function PortfolioPage() {
                 {/* BEGIN DESCRIPTION */}
                 <div
                   className="flex w-full flex-1 flex-col gap-2 overflow-y-auto rounded-xl bg-[#dcd3aa] p-4"
-                  id="scrolldescription"
+                  id="scrolldescription "
                 >
                   <div className="flex flex-wrap gap-3">
                     {store.languages.map((item) => (
@@ -130,7 +130,7 @@ export default function PortfolioPage() {
               </motion.div>
             </AnimatePresence>
           ) : (
-            <h1 className="col-span-11 w-full text-center font-bokuteh text-xl text-[#74664B] md:col-span-4">
+            <h1 className="col-span-11 w-full rounded-lg bg-[#f3e0c7] text-center font-bokuteh text-xl text-[#74664B] md:col-span-4 md:bg-transparent">
               Click on an image to view its full description!
             </h1>
           )}

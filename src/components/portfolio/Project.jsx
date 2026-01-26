@@ -21,6 +21,14 @@ export default function Project({ projectInfo }) {
         >
           {projectInfo.inProgress ? "In Progress" : "Completed"}
         </div>
+        <img
+          src="decoration/tallshrub2.png"
+          className={`absolute -bottom-2 -right-8 w-28 ${project.name === projectInfo.name ? "z-50" : "z-20"}`}
+        ></img>
+        <img
+          src="decoration/leftshrub1.png"
+          className={`absolute -bottom-2 -left-4 w-28 ${project.name === projectInfo.name ? "z-50" : "z-20"}`}
+        ></img>
       </div>
     </>
   );

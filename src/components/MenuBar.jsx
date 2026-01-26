@@ -94,33 +94,33 @@ export default function MenuBar() {
             E
           </h1>
 
-          <div className="-mr-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#f3f5dd] md:-mr-5">
+          <div className="-mr-3 flex h-14 w-14 items-center justify-center rounded-full bg-[#f3f5dd] md:-mr-5 md:h-20 md:w-20">
             <MdHome
-              className={`text-4xl ${url === "/" ? "text-[#dc921a]" : "text-[#b5b19c] hover:cursor-pointer hover:text-[#74664B]"}`}
+              className={`text-3xl md:text-4xl ${url === "/" ? "text-[#dc921a]" : "text-[#b5b19c] hover:cursor-pointer hover:text-[#74664B]"}`}
               onClick={() => navigate("/")}
             />
           </div>
-          <div className="-mr-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#f3f5dd] md:-mr-5">
+          <div className="-mr-3 flex h-14 w-14 items-center justify-center rounded-full bg-[#f3f5dd] md:-mr-5 md:h-20 md:w-20">
             <MdPerson
-              className={`text-4xl ${url === "/about" ? "text-[#dc921a]" : "text-[#b5b19c] hover:cursor-pointer hover:text-[#74664B]"}`}
+              className={`text-3xl md:text-4xl ${url === "/about" ? "text-[#dc921a]" : "text-[#b5b19c] hover:cursor-pointer hover:text-[#74664B]"}`}
               onClick={() => navigate("/about")}
             />
           </div>
-          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#f3f5dd]">
+          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f3f5dd] md:h-20 md:w-20">
             <MdArticle
-              className={`text-4xl ${url === "/resume" ? "text-[#dc921a]" : "text-[#b5b19c] hover:cursor-pointer hover:text-[#74664B]"}`}
+              className={`text-3xl md:text-4xl ${url === "/resume" ? "text-[#dc921a]" : "text-[#b5b19c] hover:cursor-pointer hover:text-[#74664B]"}`}
               onClick={() => navigate("/resume")}
             />
           </div>
-          <div className="-ml-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#f3f5dd] md:-ml-5">
+          <div className="-ml-3 flex h-14 w-14 items-center justify-center rounded-full bg-[#f3f5dd] md:-ml-5 md:h-20 md:w-20">
             <MdFolder
-              className={`text-4xl ${url === "/portfolio" ? "text-[#dc921a]" : "text-[#b5b19c] hover:cursor-pointer hover:text-[#74664B]"}`}
+              className={`text-3xl md:text-4xl ${url === "/portfolio" ? "text-[#dc921a]" : "text-[#b5b19c] hover:cursor-pointer hover:text-[#74664B]"}`}
               onClick={() => navigate("/portfolio")}
             />
           </div>
-          <div className="-ml-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#f3f5dd] md:-ml-5">
+          <div className="-ml-3 flex h-14 w-14 items-center justify-center rounded-full bg-[#f3f5dd] md:-ml-5 md:h-20 md:w-20">
             <MdEmail
-              className={`text-4xl ${url === "/contact" ? "text-[#dc921a]" : "text-[#b5b19c] hover:cursor-pointer hover:text-[#74664B]"}`}
+              className={`text-3xl md:text-4xl ${url === "/contact" ? "text-[#dc921a]" : "text-[#b5b19c] hover:cursor-pointer hover:text-[#74664B]"}`}
               onClick={() => navigate("/contact")}
             />
           </div>

@@ -45,7 +45,7 @@ export default function EducationComponent() {
                       </h1>
                       <div className="flex w-full flex-wrap gap-x-4 gap-y-2 text-sm font-semibold text-[#74664B]">
                         {school.courses.map((course) => (
-                          <div className="rounded-full bg-[#f3e0c7] px-2 py-0.5">
+                          <div className="rounded-full bg-[#dcd3aa] px-2 py-0.5">
                             {course}
                           </div>
                         ))}
