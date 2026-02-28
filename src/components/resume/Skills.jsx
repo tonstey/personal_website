@@ -5,8 +5,8 @@ export default function SkillsComponent() {
     <>
       <div>
         {skills ? (
-          <div className="h-full max-w-full overflow-y-auto p-6">
-            <div className="relative overflow-y-auto rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-6">
+          <div className="h-full max-w-full p-6">
+            <div className="relative rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-6">
               <div className="flex flex-col gap-4 rounded-xl bg-[#f2eee2] p-6">
                 <div>
                   <h1 className="mb-1 font-bokuteh text-lg text-[#74664B]">

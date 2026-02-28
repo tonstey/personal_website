@@ -10,6 +10,13 @@
 }
 
 @font-face {
+  font-family: "GreatVibes";
+  src: url("/fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "SeuratPro";
   src: url("/fonts/SeuratPro.otf") format("opentype");
   font-weight: 400;
@@ -28,10 +35,11 @@ html {
   position: static;
   width: 100vw;
   height: 100vh;
-  background-image: url("/decoration/background.png");
+  background-color: #e0dbbc;
   background-size: cover;
   background-repeat: no-repeat;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 #root {

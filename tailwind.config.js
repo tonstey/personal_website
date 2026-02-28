@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         title: ["Bebas Neue"],
         retro: ['"Press Start 2P"'],
+        vibes: ["GreatVibes"],
         bokuteh: ["BokutehPro", "sans-serif"],
         seurat: ["SeuratPro", "sans-serif"],
         nunito: ["Nunito"],

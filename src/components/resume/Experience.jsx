@@ -1,6 +1,8 @@
 import React from "react";
+
 import { Tab, TabGroup, TabList } from "@headlessui/react";
 import { motion } from "framer-motion";
+
 import { nonTechJobs, techJobs } from "../../data/experience.js";
 
 import { MdOutlineCalendarMonth, MdLocationOn } from "react-icons/md";
@@ -22,7 +24,9 @@ export default function ExperienceComponent() {
       <div className="flex h-full w-full flex-col items-center p-6">
         <TabGroup className="" selectedIndex={tab} onChange={setTab}>
           <TabList className="relative z-0 flex gap-4 rounded-xl bg-[#a18f6e] px-3 py-2">
-            <Tab className={`text-md relative w-[175px] font-semibold`}>
+            <Tab
+              className={`lg:text-md relative w-[130px] text-sm font-semibold lg:w-[175px]`}
+            >
               {({ selected }) => (
                 <button
                   className={`text-md w-full rounded-full px-2 py-1 font-medium transition-colors duration-200 ${
@@ -46,7 +50,9 @@ export default function ExperienceComponent() {
                 </button>
               )}
             </Tab>
-            <Tab className={`text-md relative w-[175px] font-semibold`}>
+            <Tab
+              className={`lg:text-md relative w-[130px] text-sm font-semibold lg:w-[175px]`}
+            >
               {({ selected }) => (
                 <button
                   className={`text-md w-full rounded-full px-2 py-1 font-medium transition-colors duration-200 ${
@@ -74,8 +80,8 @@ export default function ExperienceComponent() {
         </TabGroup>
 
         {experience.length > 0 ? (
-          <div className="h-full w-full overflow-hidden p-2 md:p-6">
-            <div className="relative flex h-full flex-col gap-4 overflow-y-auto rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-6">
+          <div className="h-full w-full p-2 md:p-6">
+            <div className="relative flex h-full flex-col gap-4 rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-6">
               {experience.map((job) => (
                 <div
                   className="flex flex-col gap-4 rounded-xl bg-[#f2eee2] p-6"

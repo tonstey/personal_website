@@ -18,123 +18,125 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <section className="flex flex-1 flex-col items-center overflow-x-hidden">
-        <h1 className="mb-2 text-center font-seurat text-4xl font-bold text-[#74664B]">
-          Projects
-        </h1>
+      <section className="min-h-[110vh]" id="projects">
+        <div className="mt-28 flex flex-1 flex-col items-center gap-4">
+          <h1 className="mb-2 text-center font-seurat text-4xl font-bold text-[#74664B]">
+            Projects
+          </h1>
 
-        <div className="grid h-full w-full grid-cols-11 overflow-hidden px-4 pb-4">
-          {/* BEGIN LEFT SIDE */}
-          <div
-            className={`${store.name ? "hidden" : "col-span-11 flex"} h-full flex-wrap justify-center gap-4 overflow-y-auto p-4 md:col-span-7 md:flex`}
-            id="scrollprojects"
-          >
-            {projects.map((item) => (
-              <Project key={item.name} projectInfo={item} />
-            ))}
-          </div>
-          {/* END LEFT SIDE */}
+          <div className="grid h-full w-full grid-cols-11 gap-4 px-16 pb-4 md:px-4">
+            {/* BEGIN LEFT SIDE */}
+            <div
+              className={`${store.name ? "hidden" : "col-span-11 flex"} h-full max-h-[35.5rem] flex-wrap justify-center gap-5 overflow-y-auto p-4 md:col-span-7 md:flex`}
+              id="scrollprojects"
+            >
+              {projects.map((item) => (
+                <Project key={item.name} projectInfo={item} />
+              ))}
+            </div>
+            {/* END LEFT SIDE */}
 
-          {/* BEGIN RIGHT SIDE */}
-          {store.name ? (
-            <AnimatePresence mode="wait">
-              <motion.div
-                key="project-detail"
-                initial={{ x: "100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: "100%", opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className={`${store.name ? "col-span-11 flex" : "hidden"} h-full flex-col items-center justify-between gap-3 overflow-hidden rounded-xl bg-[#f3e0c7] p-4 md:col-span-4 md:flex`}
-              >
-                {/* BEGIN HEADER */}
-                <div className="flex w-full flex-col gap-2">
-                  <div className="flex justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="rounded-lg bg-[#74664B] p-2">
-                        {store.type.includes("Software Development") ? (
-                          <BsFileEarmarkCodeFill className="text-2xl text-[#e0dbbc]" />
-                        ) : (
-                          <BsFillClipboardDataFill className="text-2xl text-[#e0dbbc]" />
-                        )}
-                      </div>
-                      <h1 className="font-bokuteh text-3xl text-[#74664B]">
-                        {store.name}
-                      </h1>
-                    </div>
-                    <IoExitOutline
-                      className="rounded-lg text-4xl text-[#74664B] hover:cursor-pointer hover:bg-[#c3b9a3] md:hidden"
-                      onClick={() => setProject({})}
-                    />
-                  </div>
-                  <hr
-                    className="w-full border border-dashed border-[#74664B] text-black"
-                    id="dashline"
-                  ></hr>
-                </div>
-
-                <div className="flex w-full justify-between">
-                  <h1 className="font-bokuteh italic text-[#74664B]">
-                    {store.type}
-                  </h1>
-                  <h1 className="font-bokuteh italic text-[#74664B]">
-                    {store.date}
-                  </h1>
-                </div>
-                {/* END HEADER */}
-
-                {/* BEGIN DESCRIPTION */}
-                <div
-                  className="flex w-full flex-1 flex-col gap-2 overflow-y-auto rounded-xl bg-[#dcd3aa] p-4"
-                  id="scrolldescription "
+            {/* BEGIN RIGHT SIDE */}
+            {store.name ? (
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key="project-detail"
+                  initial={{ x: "100%", opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: "100%", opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className={`${store.name ? "col-span-11 flex" : "hidden"} h-full max-h-[35.5rem] flex-col items-center justify-between gap-3 rounded-xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-4 md:col-span-4 md:flex`}
                 >
-                  <div className="flex flex-wrap gap-3">
-                    {store.languages.map((item) => (
-                      <div
-                        className="rounded-full border border-[#74664B] bg-[#f2f5de] px-2 py-1 font-seurat text-xs text-[#74664B]"
-                        key={item}
-                      >
-                        {item}
+                  {/* BEGIN HEADER */}
+                  <div className="flex w-full flex-col gap-2">
+                    <div className="flex justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className="rounded-lg bg-[#74664B] p-2">
+                          {store.type.includes("Software Development") ? (
+                            <BsFileEarmarkCodeFill className="text-2xl text-[#e0dbbc]" />
+                          ) : (
+                            <BsFillClipboardDataFill className="text-2xl text-[#e0dbbc]" />
+                          )}
+                        </div>
+                        <h1 className="font-bokuteh text-3xl text-[#74664B]">
+                          {store.name}
+                        </h1>
                       </div>
-                    ))}
+                      <IoExitOutline
+                        className="rounded-lg text-4xl text-[#74664B] hover:cursor-pointer hover:bg-[#c3b9a3] md:hidden"
+                        onClick={() => setProject({})}
+                      />
+                    </div>
+                    <hr
+                      className="w-full border border-dashed border-[#74664B] text-black"
+                      id="dashline"
+                    ></hr>
                   </div>
-                  <div className="font-seurat text-[#74664B]">
-                    {store.description}
-                  </div>
-                </div>
-                {/* END DESCRIPTION */}
 
-                {/* BEGIN LINKS */}
-                <div className="flex gap-4">
-                  <a
-                    className="group flex items-center justify-center gap-2 rounded-full bg-[#f2f5de] px-2 py-2 font-seurat text-xl font-light text-[#74664B] hover:cursor-pointer hover:bg-[#dde5a8] hover:text-[#91805e]"
-                    href={store.githubURL}
-                    target="_blank"
+                  <div className="flex w-full justify-between">
+                    <h1 className="font-bokuteh italic text-[#74664B]">
+                      {store.type}
+                    </h1>
+                    <h1 className="font-bokuteh italic text-[#74664B]">
+                      {store.date}
+                    </h1>
+                  </div>
+                  {/* END HEADER */}
+
+                  {/* BEGIN DESCRIPTION */}
+                  <div
+                    className="flex w-full flex-1 flex-col gap-2 overflow-y-auto rounded-xl bg-[#dcd3aa] p-4"
+                    id="scrolldescription "
                   >
-                    <FaGithub className="rounded-full bg-[#74664B] p-2 text-3xl text-[#f2f5de] group-hover:bg-[#91805e] group-hover:text-[#dde5a8]" />
-                    Github
-                  </a>
-                  {store.type.includes("Software Development") ? (
+                    <div className="flex flex-wrap gap-3">
+                      {store.languages.map((item) => (
+                        <div
+                          className="h-fit rounded-full border border-[#74664B] bg-[#f2f5de] px-2 py-1 font-seurat text-xs text-[#74664B]"
+                          key={item}
+                        >
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="font-seurat text-[#74664B]">
+                      {store.description}
+                    </div>
+                  </div>
+                  {/* END DESCRIPTION */}
+
+                  {/* BEGIN LINKS */}
+                  <div className="flex gap-4">
                     <a
                       className="group flex items-center justify-center gap-2 rounded-full bg-[#f2f5de] px-2 py-2 font-seurat text-xl font-light text-[#74664B] hover:cursor-pointer hover:bg-[#dde5a8] hover:text-[#91805e]"
-                      href={store.demoURL}
+                      href={store.githubURL}
                       target="_blank"
                     >
-                      <FaScrewdriverWrench className="rounded-full bg-[#74664B] p-2 text-3xl text-[#f2f5de] group-hover:bg-[#91805e] group-hover:text-[#dde5a8]" />
-                      Demo
+                      <FaGithub className="rounded-full bg-[#74664B] p-2 text-3xl text-[#f2f5de] group-hover:bg-[#91805e] group-hover:text-[#dde5a8]" />
+                      Github
                     </a>
-                  ) : (
-                    ""
-                  )}
-                </div>
-                {/* END LINKS */}
-              </motion.div>
-            </AnimatePresence>
-          ) : (
-            <h1 className="col-span-11 w-full rounded-lg bg-[#f3e0c7] text-center font-bokuteh text-xl text-[#74664B] md:col-span-4 md:bg-transparent">
-              Click on an image to view its full description!
-            </h1>
-          )}
-          {/* END RIGHT SIDE */}
+                    {store.type.includes("Software Development") ? (
+                      <a
+                        className="group flex items-center justify-center gap-2 rounded-full bg-[#f2f5de] px-2 py-2 font-seurat text-xl font-light text-[#74664B] hover:cursor-pointer hover:bg-[#dde5a8] hover:text-[#91805e]"
+                        href={store.demoURL}
+                        target="_blank"
+                      >
+                        <FaScrewdriverWrench className="rounded-full bg-[#74664B] p-2 text-3xl text-[#f2f5de] group-hover:bg-[#91805e] group-hover:text-[#dde5a8]" />
+                        Demo
+                      </a>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                  {/* END LINKS */}
+                </motion.div>
+              </AnimatePresence>
+            ) : (
+              <h1 className="col-span-11 w-full rounded-lg bg-[#f3e0c7] text-center font-bokuteh text-xl text-[#74664B] md:col-span-4 md:bg-transparent">
+                Click on an image to view its full description!
+              </h1>
+            )}
+            {/* END RIGHT SIDE */}
+          </div>
         </div>
       </section>
     </>

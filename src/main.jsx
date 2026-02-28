@@ -5,7 +5,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <HashRouter>
-    <div className="flex h-screen max-h-screen w-screen">
+    <div className="flex">
       <App />
     </div>
   </HashRouter>,

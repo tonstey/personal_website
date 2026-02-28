@@ -11,7 +11,7 @@ export default function Project({ projectInfo }) {
         onClick={() => store(projectInfo)}
       >
         <img
-          className={`h-60 w-60 rounded-3xl border border-[#e9deb0] hover:cursor-pointer`}
+          className={`h-48 w-48 rounded-3xl border border-[#e9deb0] hover:cursor-pointer md:h-60 md:w-60`}
           src={projectInfo.imageURL || "project_images/noimg.jpg"}
           alt="img"
         />
@@ -21,14 +21,6 @@ export default function Project({ projectInfo }) {
         >
           {projectInfo.inProgress ? "In Progress" : "Completed"}
         </div>
-        <img
-          src="decoration/tallshrub2.png"
-          className={`absolute -bottom-2 -right-8 w-28 ${project.name === projectInfo.name ? "z-50" : "z-20"}`}
-        ></img>
-        <img
-          src="decoration/leftshrub1.png"
-          className={`absolute -bottom-2 -left-4 w-28 ${project.name === projectInfo.name ? "z-50" : "z-20"}`}
-        ></img>
       </div>
     </>
   );

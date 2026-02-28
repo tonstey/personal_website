@@ -1,13 +1,14 @@
-import { MdOutlineCalendarMonth, MdLocationOn } from "react-icons/md";
 import education from "../../data/education";
+
+import { MdOutlineCalendarMonth, MdLocationOn } from "react-icons/md";
 
 export default function EducationComponent() {
   return (
     <>
       <div>
         {education.length > 0 ? (
-          <div className="h-full max-w-full overflow-hidden p-6">
-            <div className="relative flex h-full flex-col gap-4 overflow-y-auto rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-6">
+          <div className="h-full max-w-full p-6">
+            <div className="relative flex h-full flex-col gap-4 rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-6">
               {education
                 .slice()
                 .reverse()
