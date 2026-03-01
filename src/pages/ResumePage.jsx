@@ -16,7 +16,7 @@ export default function ResumePage() {
   return (
     <>
       <section className="min-h-[110vh]" id="resume">
-        <div className="mt-28 flex h-full w-full flex-1 flex-col items-center px-16">
+        <div className="mt-28 flex h-full w-full flex-1 flex-col items-center px-10 md:px-16">
           <div className="relative h-fit w-full">
             <h1 className="mb-2 text-center font-seurat text-4xl font-bold text-[#74664B]">
               Resume
@@ -32,14 +32,14 @@ export default function ResumePage() {
             )}
           </div>
 
-          <div className="flex h-full w-full items-start justify-center px-4">
+          <div className="flex h-full w-full items-start justify-center md:px-4">
             {/* BEGIN TABS */}
             <div
               className={`${resume ? "hidden" : "flex flex-col"} mt-8 h-full w-[18rem] gap-5 rounded-2xl md:col-span-3 md:flex md:flex-col md:justify-start`}
             >
               <div className="flex w-full flex-col items-center rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7]">
                 <h1
-                  className={`flex w-full items-center justify-center gap-4 rounded-xl py-8 text-center font-seurat text-2xl text-[#74664B] hover:cursor-pointer hover:bg-[#e2d1ab] ${resume == "experience" ? "scale-110 rounded-[1.5rem] bg-[#e2d1ab] shadow-lg transition-all duration-200" : ""}`}
+                  className={`flex w-full items-center justify-center gap-4 rounded-xl px-4 py-8 text-center font-seurat text-2xl text-[#74664B] hover:cursor-pointer hover:bg-[#e2d1ab] ${resume == "experience" ? "scale-110 rounded-[1.5rem] bg-[#e2d1ab] shadow-lg transition-all duration-200" : ""}`}
                   onClick={() => setResume("experience")}
                   id="exptab"
                 >

@@ -14,7 +14,7 @@ export const nonTechJobs = [
     ],
   },
   {
-    role: "Cashier/Barista",
+    role: "Cashier / Barista",
     company: "Tallgrass Drink",
     location: "Garden Grove, CA, USA",
     startDate: "Sept 2024",

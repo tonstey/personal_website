@@ -49,7 +49,7 @@ export default function PortfolioPage() {
                 >
                   {/* BEGIN HEADER */}
                   <div className="flex w-full flex-col gap-2">
-                    <div className="flex justify-between">
+                    <div className="flex flex-col justify-between md:flex-row">
                       <div className="flex items-center gap-4">
                         <div className="rounded-lg bg-[#74664B] p-2">
                           {store.type.includes("Software Development") ? (
@@ -63,7 +63,7 @@ export default function PortfolioPage() {
                         </h1>
                       </div>
                       <IoExitOutline
-                        className="rounded-lg text-4xl text-[#74664B] hover:cursor-pointer hover:bg-[#c3b9a3] md:hidden"
+                        className="rounded-lg text-6xl text-[#74664B] hover:cursor-pointer hover:bg-[#c3b9a3] md:hidden"
                         onClick={() => setProject({})}
                       />
                     </div>

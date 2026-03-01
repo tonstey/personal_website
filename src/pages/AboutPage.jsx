@@ -11,10 +11,10 @@ export default function AboutPage() {
 
           <div className="flex h-full min-h-screen w-full flex-col items-center justify-center gap-12">
             <CgProfile className="rounded-full border border-[#74664B] bg-[#f3e0c7] p-4 text-[14rem] text-[#74664B]" />
-            <div className="relative flex w-[90%] items-center rounded-xl px-12 text-[#74664B] md:px-0">
+            <div className="relative flex w-[90%] items-center rounded-xl px-10 text-[#74664B] md:px-0">
               <img
                 src="decoration/aboutvert.png"
-                className="z-1 absolute -top-[5.3rem] right-8 w-32 md:hidden"
+                className="z-1 absolute -top-[5.1rem] right-16 w-32 md:-top-[10.3rem] md:w-64"
               ></img>
 
               <div className="h-full max-h-[100vh] w-full overflow-y-auto rounded-xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-6">

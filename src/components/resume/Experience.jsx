@@ -21,7 +21,7 @@ export default function ExperienceComponent() {
 
   return (
     <>
-      <div className="flex h-full w-full flex-col items-center p-6">
+      <div className="flex h-full w-full flex-col items-center gap-4">
         <TabGroup className="" selectedIndex={tab} onChange={setTab}>
           <TabList className="relative z-0 flex gap-4 rounded-xl bg-[#a18f6e] px-3 py-2">
             <Tab
@@ -80,16 +80,16 @@ export default function ExperienceComponent() {
         </TabGroup>
 
         {experience.length > 0 ? (
-          <div className="h-full w-full p-2 md:p-6">
-            <div className="relative flex h-full flex-col gap-4 rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7] p-6">
+          <div className="h-full max-h-[110vh] w-full overflow-y-auto p-2 md:p-6">
+            <div className="relative flex h-full flex-col gap-4 rounded-2xl border-2 border-[#dcd3aa] bg-[#f3e0c7] px-3 py-6">
               {experience.map((job) => (
                 <div
                   className="flex flex-col gap-4 rounded-xl bg-[#f2eee2] p-6"
                   key={job.role + job.company}
                 >
-                  <div className="flex flex-wrap justify-between font-bokuteh text-[#74664B]">
-                    <div className="flex flex-col gap-1">
-                      <h1 className="md:text-lg portrait:text-[1.2rem] md:portrait:text-lg">
+                  <div className="flex flex-col justify-between font-bokuteh text-[#74664B] md:flex-row">
+                    <div className="flex flex-col gap-2 md:gap-0.5">
+                      <h1 className="truncate md:text-lg portrait:text-[1.2rem] md:portrait:text-lg">
                         {job.role}
                       </h1>
                       <h1 className="md:text-md md:portrait:text-md italic portrait:text-[0.85rem]">
@@ -98,7 +98,7 @@ export default function ExperienceComponent() {
                     </div>
 
                     <div className="flex flex-col items-start md:items-end">
-                      <h1 className="md:text-md md:portrait:text-md flex items-center gap-1 portrait:text-[0.75rem]">
+                      <h1 className="md:text-md md:portrait:text-md flex items-center gap-0.5 border text-end portrait:text-[0.75rem]">
                         <MdLocationOn className="text-2xl" />
                         {job.location}
                       </h1>

@@ -50,7 +50,7 @@ export default function ContactPage() {
             Contact Me
           </h1>
 
-          <div className="flex w-full flex-1 flex-wrap items-center justify-evenly gap-10">
+          <div className="flex w-full flex-1 flex-wrap items-center justify-evenly gap-10 md:mt-10">
             {/* BEGIN EMAIL INQUIRY */}
             <div
               className="relative my-4 flex max-h-[95%] w-[20rem] flex-col gap-3 rounded-xl border border-[#e9deb0] bg-[#f2ede0] p-5 shadow-2xl md:my-0 md:w-[44rem] md:portrait:my-4 md:landscape:my-16"
