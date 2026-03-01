@@ -3,10 +3,11 @@ import useWebStore from "../store/store";
 import ExperienceComponent from "../components/resume/Experience";
 import EducationComponent from "../components/resume/Education";
 import SkillsComponent from "../components/resume/Skills";
+import CertificateComponent from "../components/resume/Certificates";
 
 import { MdOutlineFileDownload } from "react-icons/md";
 import { IoExitOutline } from "react-icons/io5";
-import { FaGraduationCap, FaBriefcase, FaTools } from "react-icons/fa";
+import { FaGraduationCap, FaBriefcase, FaTools, FaAward } from "react-icons/fa";
 
 export default function ResumePage() {
   const resume = useWebStore((state) => state.displayResume);
@@ -14,7 +15,7 @@ export default function ResumePage() {
 
   return (
     <>
-      <section className="min-h-[110vh] border" id="resume">
+      <section className="min-h-[110vh]" id="resume">
         <div className="mt-28 flex h-full w-full flex-1 flex-col items-center px-16">
           <div className="relative h-fit w-full">
             <h1 className="mb-2 text-center font-seurat text-4xl font-bold text-[#74664B]">
@@ -61,6 +62,14 @@ export default function ResumePage() {
                   <FaTools className="text-[1.8rem]" />
                   Skills
                 </h1>
+                <h1
+                  className={`flex w-full items-center justify-center gap-4 rounded-xl py-8 text-center font-seurat text-2xl text-[#74664B] hover:cursor-pointer hover:bg-[#e2d1ab] ${resume == "certificates" ? "scale-110 rounded-[1.5rem] bg-[#e2d1ab] shadow-lg transition-all duration-200" : ""}`}
+                  onClick={() => setResume("certificates")}
+                  id="certificatetab"
+                >
+                  <FaAward className="text-[1.8rem]" />
+                  Certificates
+                </h1>
               </div>
               <a
                 className="flex w-full items-center justify-center gap-4 rounded-xl bg-[#6b5b47] px-4 py-8 text-center font-seurat text-xl text-white hover:bg-[#89745b]"
@@ -85,6 +94,8 @@ export default function ResumePage() {
                     return <EducationComponent />;
                   case "skills":
                     return <SkillsComponent />;
+                  case "certificates":
+                    return <CertificateComponent />;
                   default:
                     break;
                 }
