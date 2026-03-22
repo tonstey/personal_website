@@ -23,7 +23,7 @@ export const projectinformation = [
   {
     imageURL: "/personal_website/project_images/cartcompass.png",
     demoURL: "https://cartcompass.vercel.app/",
-    githubURL: "https://github.com/tonstey/receipt_saver",
+    githubURL: "https://github.com/tonstey/receipt-saver",
     name: "CartCompass",
     date: "Oct 2025",
     type: "Full Stack Software Development",
