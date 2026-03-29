@@ -15,10 +15,11 @@ export const projectinformation = [
       "Tailwind",
       "Zustand",
       "FastAPI",
+      "MongoDB",
       "SQLAlchemy",
     ],
     description:
-      'A full-stack website designed to recommend users recipes based on users\' ingredients supply and cuisine preferences. Users are able to search different recipes and ingredients. Users are also able to like their favorite recipes and view key information about selected recipes, such as nutrition facts, steps, and the original recipe link as well. This website implements secure authentication methods, using confirmation emails as an account verification method and using JSON web tokens to authenticate logins. Recipes and ingredients derive from the Kaggle dataset, "Food.com Recipes and Interactions", which received their data from Food.com between the years 2000 and 2018.',
+      'A full-stack website designed to recommend users recipes based on users\' ingredients supply and cuisine preferences. Users are able to search different recipes and ingredients. Users are also able to like their favorite recipes and view key information about selected recipes, such as nutrition facts, steps, and the original recipe link as well. Users are also able to rate recipes on a scale from 1 to 5, with 1 being horrible with 1 being fantastic. Users are also able to add and remove ingredients to their virtual pantry. Once enough ingredients are added, users are then able to be recommended recipes! This website implements secure authentication methods, using confirmation emails as an account verification method and using JSON web tokens to authenticate logins. Recipes and ingredients derive from the Kaggle dataset, "Food.com Recipes and Interactions", which received their data from Food.com between the years 2000 and 2018.',
   },
   {
     imageURL: "/personal_website/project_images/cartcompass.png",
