@@ -1,12 +1,32 @@
 export const projectinformation = [
   {
+    imageURL: "",
+    demoURL: "https://flushfinder-rouge.vercel.app/",
+    githubURL: "https://flushfinder-rouge.vercel.app/",
+    name: "FlushFinder",
+    date: "Apr 2026",
+    type: "Full Stack Software Development",
+    inProgress: true,
+    languages: [
+      "TypeScript",
+      "ReactJS",
+      "React Router DOM",
+      "TanStack Query (React Query)",
+      "Tailwind",
+      "Zustand",
+      "FastAPI",
+      "Supabase",
+    ],
+    description: "",
+  },
+  {
     imageURL: "/personal_website/project_images/savorly.jpg",
     demoURL: "https://savorly-one.vercel.app/",
     githubURL: "https://github.com/tonstey/recipe-recommender",
     name: "Savorly",
     date: "Dec 2025",
     type: "Full Stack Software Development",
-    inProgress: true,
+    inProgress: false,
     languages: [
       "TypeScript",
       "ReactJS",
