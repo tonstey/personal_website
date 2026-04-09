@@ -105,7 +105,7 @@ export const projectinformation = [
   },
   {
     imageURL: "/personal_website/project_images/weatherwise.png",
-    demoURL: "",
+    demoURL: "https://tonstey.github.io/weather-app/",
     githubURL: "https://github.com/tonstey/weather-app",
     name: "Weather Wise",
     date: "Aug 2024",
