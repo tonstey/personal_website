@@ -2,7 +2,7 @@ export const projectinformation = [
   {
     imageURL: "",
     demoURL: "https://flushfinder-rouge.vercel.app/",
-    githubURL: "https://flushfinder-rouge.vercel.app/",
+    githubURL: "https://github.com/tonstey/restroom-review-app/",
     name: "FlushFinder",
     date: "Apr 2026",
     type: "Full Stack Software Development",
