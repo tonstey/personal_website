@@ -78,7 +78,16 @@ export default function ResumePage() {
               >
                 {" "}
                 <MdOutlineFileDownload className="text-[2.75rem]" />
-                Download Resume
+                Download SWE Resume
+              </a>
+              <a
+                className="flex w-full items-center justify-center gap-4 rounded-xl bg-[#6b5b47] px-4 py-8 text-center font-seurat text-xl text-white hover:bg-[#89745b]"
+                href="TonyVuong_Resume.pdf"
+                download={"TonyVuong_Resume"}
+              >
+                {" "}
+                <MdOutlineFileDownload className="text-[2.75rem]" />
+                Download Data Analytics Resume
               </a>
             </div>
             {/* END TABS */}
